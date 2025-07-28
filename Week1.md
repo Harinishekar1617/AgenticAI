@@ -58,6 +58,10 @@ Start with medium sized models or mid priced models like GPT 4o and sonnet 3.5
 
 ** Generative AI terms **
 
+<img width="2048" height="1404" alt="image" src="https://github.com/user-attachments/assets/5b29097f-a37f-425d-8256-27926e2e36ae" />
+
+**Agentic AI terms **
+
 <img width="2048" height="1404" alt="image" src="https://github.com/user-attachments/assets/ff635b53-7e96-40fb-95e9-1eaecc708b7b" />
 
 
