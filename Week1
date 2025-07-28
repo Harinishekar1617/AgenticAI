@@ -1,0 +1,14 @@
+**Langchain setup and Demo**
+
+Install uv
+Virtual environment setup
+new working directory
+
+uv venv --python 3.11.8
+uv python pin 3.11.8
+.venv\Scripts\activate
+
+uv pip install langchain==0.3.25 langgraph==0.4.5 langchain-openai==0.3.18 python-dotenv==1.1.0
+python -c "import langchain; print(langchain.__version__)"
+
+**Generate OPENAI APi key**
