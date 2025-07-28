@@ -76,8 +76,9 @@ https://aws.amazon.com/ai/generative-ai/use-cases/?awsm.page-customer-references
 
 If you just want a quick, practical understanding of LLMs and transformers without diving into machine learning and deep learning, here are two great resources:
 
-Jay Alammar’s Illustrated Transformers – Illustrated Transformer
+Jay Alammar’s Illustrated Transformers – https://jalammar.github.io/illustrated-transformer/
 
-Andrej Karpathy’s video on LLM training – LLMs: Training & Fine-Tuning
+Andrej Karpathy’s video on LLM training – https://www.youtube.com/watch?v=7xTGNNLPyMI
 
-Illustrating Reinforcement Learning from Human Feedback (RLHF) - From HuggingFace
+Illustrating Reinforcement Learning from Human Feedback (RLHF) - https://huggingface.co/blog/rlhf
+
