@@ -64,6 +64,20 @@ Start with medium sized models or mid priced models like GPT 4o and sonnet 3.5
 
 <img width="2048" height="1404" alt="image" src="https://github.com/user-attachments/assets/ff635b53-7e96-40fb-95e9-1eaecc708b7b" />
 
+**Our Favorite Resources on AI in the Enterprise (Read Them to Identify Use-Cases)**
 
+https://www.zenml.io/llmops-database
 
+https://cloud.google.com/transform/101-real-world-generative-ai-use-cases-from-industry-leaders
 
+https://aws.amazon.com/ai/generative-ai/use-cases/?awsm.page-customer-references=1
+
+**Shorter Learning Roadmap (2-3 hours)**
+
+If you just want a quick, practical understanding of LLMs and transformers without diving into machine learning and deep learning, here are two great resources:
+
+Jay Alammar’s Illustrated Transformers – Illustrated Transformer
+
+Andrej Karpathy’s video on LLM training – LLMs: Training & Fine-Tuning
+
+Illustrating Reinforcement Learning from Human Feedback (RLHF) - From HuggingFace
