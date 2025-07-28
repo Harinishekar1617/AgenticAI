@@ -12,3 +12,8 @@ uv pip install langchain==0.3.25 langgraph==0.4.5 langchain-openai==0.3.18 pytho
 python -c "import langchain; print(langchain.__version__)"
 
 **Generate OPENAI APi key**
+
+Set up IPykernel for Jupyter notebook
+
+uv pip install ipykernel jupyter
+python -m ipykernel install --user --name=venv --display-name "Python (langchain)"
