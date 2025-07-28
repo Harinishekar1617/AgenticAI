@@ -44,4 +44,22 @@ AI message'response from the AI model itslef
 system message: instruct AI model on how to behave
 
 Chaining
-Chaining is the core idea behind how langchain works, it connects all the runnables together and produces an output. connects steps together. 
+Chaining is the core idea behind how langchain works, it connects all the runnables together and produces an output. connects steps together.
+
+**NotebookLMs epic use cases**
+https://www.youtube.com/watch?v=9xjmvUS-UGU
+
+Vercel's VP of Product on How to Use v0 to Build Your Own Ideas (Step-by-Step Guide)
+Build a Full-Stack App in 7 Minutes with v0 (Figma to Code)
+
+**Benchmarking Models**
+chatbot arena
+Start with medium sized models or mid priced models like GPT 4o and sonnet 3.5
+
+** Generative AI terms **
+
+<img width="2048" height="1404" alt="image" src="https://github.com/user-attachments/assets/ff635b53-7e96-40fb-95e9-1eaecc708b7b" />
+
+
+
+
