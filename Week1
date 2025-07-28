@@ -17,3 +17,31 @@ Set up IPykernel for Jupyter notebook
 
 uv pip install ipykernel jupyter
 python -m ipykernel install --user --name=venv --display-name "Python (langchain)"
+
+Run langchain_demo.ipynb file
+
+-- Understanding here
+Langchain : Core Purpose: A flexible, modular framework designed to simplify the creation of applications powered by LLMs.
+langgraph : Core Purpose: An extension of LangChain specifically designed for building stateful, multi-actor 
+(agentic) applications with LLMs using a graph-based approach.
+
+Choose LangChain if your application involves a clear, sequential flow of LLM operations (e.g., simple Q&A, content generation, basic summarization). It's quicker to get started for these use cases.
+
+Choose LangGraph if you need to build more sophisticated, autonomous, and stateful agents that require:
+
+- Iterative reasoning (loops)
+- Complex decision-making and branching
+- Human intervention points
+- Maintaining a shared, evolving state over many turns
+- Multi-agent coordination
+
+Runnables are the standard, connectable building blocks of LangChain that let you easily design and run complex AI workflows. Prompttempate, output parser
+etc.. are all runnables
+
+Message types
+user message : how to represent inout from a human user
+AI message'response from the AI model itslef
+system message: instruct AI model on how to behave
+
+Chaining
+Chaining is the core idea behind how langchain works, it connects all the runnables together and produces an output. connects steps together. 
