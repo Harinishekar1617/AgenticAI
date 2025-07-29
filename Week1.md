@@ -135,3 +135,19 @@ The trained reward model can now take any new (prompt, response) pair and predic
 
 <img width="2080" height="1571" alt="image" src="https://github.com/user-attachments/assets/9d15a5e4-25e9-4bdc-ac94-8bc4de3cd5fc" />
 
+**Simple Explanation: Policy is more like a rule book that exists for the RL agent**
+A policy answers the question: "Given what I see now (my current state), what should I do next (what action should I take)?"
+
+More Technical Explanation:
+Mathematically, a policy is usually denoted by π (pi). It's a mapping from states to actions:
+
+Deterministic Policy: For every state s, the policy π(s) directly tells you one specific action a to take.
+Example: "If I am in state S1, always take action A 3
+​Stochastic Policy: For every state s, the policy π(a∣s) gives you a probability distribution over all possible actions. This means it tells you the likelihood of taking each action from that state.
+
+Example: "If I am in state S 1take action A 1with 70% probability, and action A 2with 30% probability." Stochastic policies are often preferred, especially during learning, as they allow for exploration (trying different actions to see what happens).
+
+The action space is all the actions the agent can take, in this context it ids all the tokens that are available in the voxabulary of large language model
+the observation space is all that the agent can observe
+
+<img width="1973" height="1682" alt="image" src="https://github.com/user-attachments/assets/67f73994-bf78-4a42-ab03-700937d99df9" />
