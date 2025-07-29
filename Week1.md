@@ -82,3 +82,56 @@ Andrej Karpathy’s video on LLM training – https://www.youtube.com/watch?v=7x
 
 Illustrating Reinforcement Learning from Human Feedback (RLHF) - https://huggingface.co/blog/rlhf
 
+**Reinforcement learning**
+
+learning to directly optimize something with human feedback
+3 core components
+- pretraining a language model
+- gathering data and training a reward model
+  <img width="1400" height="1046" alt="image" src="https://github.com/user-attachments/assets/79bfadf3-03cd-4021-bf79-0a0a3f19c5fc" />
+
+PASSING prompts to the base model and then generating a scalar reward with human preferences to build a reward model
+- fine tuning LM with RL
+**Example: Training a Reward Model for a Chatbot**
+Goal: Train a chatbot to generate helpful and polite responses.
+
+1. Data Collection:
+
+Prompt: "What is the capital of France?"
+
+Generate Multiple Responses (e.g., from an initial LLM):
+
+Response A: "Paris is the capital." (Helpful, concise)
+
+Response B: "The capital of France is Paris, of course. Didn't you know that?" (Helpful but rude)
+
+Response C: "I like dogs." (Irrelevant)
+
+Response D: "The capital of France is Paris." (Helpful, polite)
+
+Human Annotation: A human annotator receives these responses and is asked to rank them.
+
+Human's judgment: D > A > B > C (D is best, then A, then B, then C)
+
+From this judgment, we create "reward pairs":
+
+(Prompt, D) vs (Prompt, A) (D is preferred over A)
+
+(Prompt, A) vs (Prompt, B) (A is preferred over B)
+
+(Prompt, B) vs (Prompt, C) (B is preferred over C)
+
+...and all other possible pairs.
+
+**Reward Model Training:**
+Model Input: A pair of (prompt, response) combinations.
+Model Output: A single scalar score for each (prompt, response) combination.
+Training Loop:
+Take a batch of human-labeled preference pairs (e.g., (Prompt, D) as "chosen" and (Prompt, B) as "rejected").
+
+**After Training:**
+
+The trained reward model can now take any new (prompt, response) pair and predict a numerical score that approximates how a human would rate that response. This score then becomes the "reward signal" that is fed to the RL agent (the main chatbot model) during its reinforcement learning phase (e.g., using PPO). The RL agent then learns to generate responses that maximize this predicted reward, thus aligning its behavior with human preferences without needing constant human supervision during its core training loop.
+
+<img width="2080" height="1571" alt="image" src="https://github.com/user-attachments/assets/9d15a5e4-25e9-4bdc-ac94-8bc4de3cd5fc" />
+
