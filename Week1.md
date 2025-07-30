@@ -151,3 +151,32 @@ The action space is all the actions the agent can take, in this context it ids a
 the observation space is all that the agent can observe
 
 <img width="1973" height="1682" alt="image" src="https://github.com/user-attachments/assets/67f73994-bf78-4a42-ab03-700937d99df9" />
+
+**Transformers**
+
+- broken down into encoders and decoders
+- Encoding component consists of feed forward neural network and self-attention layer
+  Encoders first inout flow through self attention layer,a layer that helps look at other words in the sentence as it encodes a specific word. These outputs are fed to feed forward neural network
+- Decoder has both layers,but between them is attention that helps the decoder focus on relevant parts of the input sentence
+
+Encoding
+<img width="1268" height="771" alt="image" src="https://github.com/user-attachments/assets/5f442b84-d079-4d8c-b1f6-b4f981074c06" />
+
+Each word is represented as a vector with 512 dimensions and passed to self attention layer, then they pass through feed forward, the first level takes the vectors from word embeddings and the second layer takes the encoders from first layer
+As the model processes each word (each position in the input sequence), self attention allows it to look at other positions in the input sequence for clues that can help lead to a better encoding for this word.
+
+**How self attention works**
+The first step in calculating self-attention is to create three vectors from each of the encoder’s input vectors (in this case, the embedding of each word)
+
+<img width="875" height="552" alt="image" src="https://github.com/user-attachments/assets/b76227e6-04d0-49be-be80-8daa83d2114c" />
+
+The second step in calculating self-attention is to calculate a score. Say we’re calculating the self-attention for the first word in this example, “Thinking”. We need to score each word of the input sentence against this word
+
+<img width="685" height="358" alt="image" src="https://github.com/user-attachments/assets/5df35f70-6791-4795-a87b-52052bc37350" />
+
+The third and fourth steps are to divide the scores by 8 and passit through a softmax function so the scores are all positive and add upto 1
+the fifth step is to multiply it with the value vector and then finally sum up that to arrive at the embedding output from self attention layer
+
+
+
+
